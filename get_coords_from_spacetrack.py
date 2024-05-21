@@ -90,7 +90,7 @@ def generate_and_save_coordinates(sat_id, start_date, end_date):
         for tle_date, tle_1, tle_2 in tle_data:
             if current_date.date() == tle_date.date():
                 lon, lat = get_lat_lon_sgp(tle_1, tle_2, current_date)
-                save_coordinates_to_file(f'sputniki/SAT-{satellite_id}.dat', current_date, lat, lon)
+                save_coordinates_to_file(f'satellites/SAT-{satellite_id}.dat', current_date, lat, lon)
         current_date += delta
 
 
